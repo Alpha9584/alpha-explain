@@ -1,6 +1,6 @@
 # α-explain
 
-A clean Chrome extension that explains scientific terms when you highlight text and press **Shift + E**.
+A clean chromium extension that explains scientific terms when you highlight text and press **Shift + E**.
 
 ## Features
 
