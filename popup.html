@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>α-explain Settings</title>
+  <link rel="stylesheet" href="popup-styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-icon">α</div>
+      <h1>α-explain</h1>
+      <div class="subtitle">Scientific term explainer</div>
+    </div>
+
+    <div class="section">
+      <div class="info-box">
+        <strong>Setup Required:</strong> This extension uses Google's Gemini API to generate explanations.
+        You'll need a free API key from
+        <a href="https://makersuite.google.com/app/apikey" target="_blank" class="link">Google AI Studio</a>.
+      </div>
+
+      <div class="input-group">
+        <label for="apiKey">Gemini API Key</label>
+        <input type="password" id="apiKey" placeholder="Enter your API key">
+      </div>
+
+      <button class="button" id="saveBtn">Save Settings</button>
+      <div class="status" id="status"></div>
+    </div>
+
+    <div class="usage">
+      <div class="usage-title">How to use:</div>
+      <ol class="usage-steps">
+        <li>Highlight any scientific term on a webpage</li>
+        <li>Press <code>Shift + E</code></li>
+        <li>Read the explanation in the popup!</li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

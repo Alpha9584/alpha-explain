@@ -1,0 +1,186 @@
+/* α-explain Styles - Modern Smooth Dark Theme */
+
+.alpha-explain-popup {
+  position: absolute;
+  z-index: 2147483647;
+  min-width: 340px;
+  max-width: 500px;
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  animation: alpha-explain-fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+@keyframes alpha-explain-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.alpha-explain-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.alpha-explain-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.alpha-explain-icon {
+  font-size: 26px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #58a6ff 0%, #79c0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(88, 166, 255, 0.3));
+  flex-shrink: 0;
+}
+
+.alpha-explain-term {
+  flex: 1;
+  color: #e6edf3;
+  font-size: 15px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.alpha-explain-close {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #adbac7;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  line-height: 1;
+  padding: 0;
+}
+
+.alpha-explain-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #e6edf3;
+  transform: scale(1.05);
+}
+
+.alpha-explain-close:active {
+  transform: scale(0.95);
+}
+
+.alpha-explain-content {
+  padding: 20px;
+  color: #adbac7;
+  font-size: 14.5px;
+  line-height: 1.7;
+  max-height: 320px;
+  overflow-y: auto;
+  background: linear-gradient(145deg, #1a1a2e 0%, #0f1419 100%);
+}
+
+.alpha-explain-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px;
+  color: #58a6ff;
+}
+
+.alpha-explain-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(88, 166, 255, 0.15);
+  border-top-color: #58a6ff;
+  border-radius: 50%;
+  animation: alpha-explain-spin 0.7s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(88, 166, 255, 0.3));
+}
+
+@keyframes alpha-explain-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.alpha-explain-loading p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.alpha-explain-explanation {
+  color: #cdd9e5;
+  line-height: 1.7;
+  font-size: 14.5px;
+}
+
+.alpha-explain-error {
+  color: #ff6b6b;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.alpha-explain-error p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Smooth scrollbar styling */
+.alpha-explain-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.alpha-explain-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.alpha-explain-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #58a6ff 0%, #1f6feb 100%);
+  border-radius: 5px;
+  border: 2px solid #1a1a2e;
+  transition: background 0.2s ease;
+}
+
+.alpha-explain-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #79c0ff 0%, #58a6ff 100%);
+}
